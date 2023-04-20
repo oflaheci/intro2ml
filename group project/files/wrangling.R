@@ -24,6 +24,9 @@ df$X <- 1:nrow(df)
 head(df)
 ncol(df) # 14
 
+# clear environment
+rm(list=setdiff(ls(), "df"))
+
 # delete added observation col 
 df <- subset(df, select = -c(X)) 
 
