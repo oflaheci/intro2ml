@@ -24,8 +24,8 @@ df$X <- 1:nrow(df)
 head(df)
 ncol(df) # 14
 
-# if need to delete observation col 
-# df <- subset(df, select = -c(X)) 
+# delete added observation col 
+df <- subset(df, select = -c(X)) 
 
 # write csv
 write_csv(df, "./data/fullsubset.csv")
